@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SelectCar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="p74-1R-qJB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Car" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEv-Nj-Rrf">
+                                <rect key="frame" x="112" y="64" width="151" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-3V-iKj">
+                                <rect key="frame" x="27.5" y="164" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="AB2-6y-5Sh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ak8-gN-FUb"/>
+                                </connections>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla-model-s.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-IM-1Bc">
+                                <rect key="frame" x="27.5" y="408" width="320" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="8wI-ee-xEf"/>
+                                    <constraint firstAttribute="height" constant="200" id="bcg-iT-7NE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p74-1R-qJB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2Az-iw-EHV"/>
+                            <constraint firstItem="IEv-Nj-Rrf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="2y3-u4-GfH"/>
+                            <constraint firstItem="p74-1R-qJB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7d0-wq-81K"/>
+                            <constraint firstItem="p74-1R-qJB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JrE-7f-cEM"/>
+                            <constraint firstItem="UX9-3V-iKj" firstAttribute="top" secondItem="IEv-Nj-Rrf" secondAttribute="bottom" constant="59" id="iAS-cF-FEH"/>
+                            <constraint firstItem="UX9-3V-iKj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qmc-HL-80i"/>
+                            <constraint firstItem="IEv-Nj-Rrf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdJ-XK-x1e"/>
+                            <constraint firstItem="RnF-IM-1Bc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wwX-Sh-DiJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RnF-IM-1Bc" secondAttribute="bottom" constant="59" id="yDI-SQ-Nca"/>
+                            <constraint firstAttribute="trailing" secondItem="p74-1R-qJB" secondAttribute="trailing" id="yka-8C-2jg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="RnF-IM-1Bc" id="Sod-kC-7aA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.jpeg" width="3264" height="2448"/>
+        <image name="tesla-model-s.jpg" width="1200" height="800"/>
+    </resources>
+</document>
